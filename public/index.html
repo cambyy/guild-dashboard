@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thrall Dressed · Guild Dashboard</title>
+  <meta name="description" content="Professions, levels, classes and achievements for the Thrall Dressed guild in WoW: Forever.">
+  <link rel="icon" href="/favicon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<div class="gp">
+  <header class="gp-head">
+    <div class="gp-actions">
+      <button type="button" class="gp-refresh" id="refresh-btn" title="Fetch the latest data from the Armory">
+        <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9M13.5 2.5v3h-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Refresh</span>
+      </button>
+      <p class="gp-updated">Last updated <span id="updated">—</span></p>
+      <p class="gp-msg" id="refresh-msg" hidden></p>
+    </div>
+    <div class="gp-brand">
+      <img class="gp-logo" src="/logo.jpg" alt="Thrall Dressed guild logo" width="72" height="72">
+      <div>
+        <h1><a class="gp-link" href="https://worldofwarcraft.blizzard.com/en-us/forever/us/armory/guild/thrall-dressed" target="_blank" rel="noopener noreferrer">Thrall Dressed</a></h1>
+        <p class="gp-subtitle">Guild Dashboard</p>
+      </div>
+    </div>
+    <p class="gp-lede">Tracking <b id="lede-members">—</b> characters with <b id="lede-active">—</b> active professions. Thinnest crafting coverage: <b id="lede-thin">—</b>.</p>
+  </header>
+
+  <details class="gp-card gp-ach" id="achievements">
+    <summary>
+      <span>Guild Achievements</span>
+      <span class="gp-chip" id="ach-new" hidden></span>
+      <span class="gp-ach-caret" aria-hidden="true">▾</span>
+    </summary>
+    <p class="gp-note">Levels 10, 20, 30, 40, 50 and 60, and profession skill 75, 150, 225 and 300, newest first.</p>
+    <ul class="gp-ach-list" id="ach-list"></ul>
+  </details>
+
+  <section class="gp-tiles">
+    <div class="gp-card"><div class="gp-tile-label">Characters tracked</div><div class="gp-tile-num" id="t-members">—</div><div class="gp-tile-sub">With a readable character sheet</div></div>
+    <div class="gp-card"><div class="gp-tile-label">Primary professions</div><div class="gp-tile-num" id="t-prim">—</div><div class="gp-tile-sub">Across all tracked characters</div></div>
+    <div class="gp-card"><div class="gp-tile-label">Highest primary skill</div><div class="gp-tile-num" id="t-top">—</div><div class="gp-tile-sub" id="t-top-who">—</div></div>
+    <div class="gp-card"><div class="gp-tile-label">Maxed at current cap</div><div class="gp-tile-num" id="t-capped">—</div><div class="gp-tile-sub">Need a trainer for the next rank</div></div>
+  </section>
+
+  <section class="gp-grid">
+    <div class="gp-card">
+      <h2>Classes</h2>
+      <p class="gp-note">How many characters play each class; click a slice to filter the list below.</p>
+      <div class="gp-chart" id="class-pie"></div>
+    </div>
+    <div class="gp-card">
+      <h2>Character levels</h2>
+      <p class="gp-note">Characters at each level. The shaded band is the guild average plus or minus one standard deviation; the dashed line is the average (<b id="avg-level">—</b>). Click a bar to filter.</p>
+      <div class="gp-chart" id="level-chart"></div>
+    </div>
+  </section>
+
+  <section class="gp-grid">
+    <div class="gp-card">
+      <h2>Primary profession coverage</h2>
+      <p class="gp-note">Characters per profession; hover for the guild's best, click a bar to filter the list below.</p>
+      <div class="gp-chart" id="cov-prim"></div>
+    </div>
+    <div class="gp-card">
+      <h2>Secondary professions</h2>
+      <p class="gp-note">Cooking, fishing and first aid trained past skill 1; click a bar to filter the list below.</p>
+      <div class="gp-chart" id="cov-sec"></div>
+    </div>
+  </section>
+
+  <section class="gp-card" id="roster">
+    <h2>Who has what</h2>
+    <p class="gp-note">Primary professions by default; tick the box to add cooking, fishing and first aid. Bars show progress toward 300; an amber skill number means it's at its current cap. Sorted by level, highest first; click a header to sort.</p>
+    <div class="gp-controls">
+      <input type="search" id="search" placeholder="Search character or profession" aria-label="Search">
+      <select id="prof-select" aria-label="Profession"></select>
+      <label class="gp-toggle"><input type="checkbox" id="show-sec"> Show secondary skills</label>
+    </div>
+    <div class="gp-chips" id="chips" hidden></div>
+    <div class="gp-tablewrap">
+      <table class="gp-table">
+        <thead><tr>
+          <th><button data-sort="character">Character</button></th>
+          <th class="gp-hide-narrow"><button data-sort="cls">Class</button></th>
+          <th class="gp-hide-narrow" aria-sort="descending"><button data-sort="level">Level</button></th>
+          <th><button data-sort="profession">Profession</button></th>
+          <th class="gp-hide-narrow"><button data-sort="kind">Type</button></th>
+          <th><button data-sort="skill">Skill</button></th>
+          <th><button data-sort="max">Cap</button></th>
+        </tr></thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="gp-foot">Data from the public <a class="gp-link" href="https://worldofwarcraft.blizzard.com/en-us/forever/us/armory/guild/thrall-dressed" target="_blank" rel="noopener noreferrer">World of Warcraft Armory</a>, refreshed daily. Fan-made; not affiliated with Blizzard Entertainment.</footer>
+</div>
+</body>
+</html>

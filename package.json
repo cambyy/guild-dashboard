@@ -1,0 +1,13 @@
+{
+  "name": "guild-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Thrall Dressed guild dashboard: professions, levels, classes and achievements from the WoW: Forever Armory.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@vercel/blob": "^1.1.1"
+  }
+}

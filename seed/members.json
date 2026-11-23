@@ -1,0 +1,30 @@
+{
+  "_comment": "Guild members the refresh reads from the Armory. Add new members' Armory names here (lowercase, words joined with hyphens, as in their Armory link). Members already in the saved data are always included, so you only need to add newcomers.",
+  "members": [
+    "arnu-ashvane",
+    "arnette-fizzlebeef",
+    "biff-baldhead",
+    "bigmama-moomoo",
+    "coolin-boolin",
+    "dank-coil",
+    "electro-cutey",
+    "evianne-purafire",
+    "gerry-meandering",
+    "ghoast-dog",
+    "hap-hzrd",
+    "incon-siderate",
+    "incon-sistent",
+    "incon-solable",
+    "incon-trovertible",
+    "kraid-felman",
+    "moriar-felman",
+    "mywifeleftme-tookthekids",
+    "reese-withershock",
+    "shibito-duskblade",
+    "slate-fistcrunch",
+    "stever-winn",
+    "succubi-senpai",
+    "swanky-pantz",
+    "toyt-arisen"
+  ]
+}

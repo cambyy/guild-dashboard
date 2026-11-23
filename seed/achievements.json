@@ -1,0 +1,662 @@
+{
+ "rows": [
+  {
+   "at": "2026-11-08T23:25:00Z",
+   "character": "Swanky Pantz",
+   "kind": "level",
+   "profession": "",
+   "milestone": 20
+  },
+  {
+   "at": "2026-11-08T23:25:00Z",
+   "character": "Arnu Ashvane",
+   "kind": "profession",
+   "profession": "Skinning",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-08T23:25:00Z",
+   "character": "Incon Solable",
+   "kind": "profession",
+   "profession": "Tailoring",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-08T23:25:00Z",
+   "character": "Incon Solable",
+   "kind": "profession",
+   "profession": "Enchanting",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-08T23:25:00Z",
+   "character": "Swanky Pantz",
+   "kind": "profession",
+   "profession": "Leatherworking",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-08T23:25:00Z",
+   "character": "Electro Cutey",
+   "kind": "profession",
+   "profession": "Fishing",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-09T18:00:00Z",
+   "character": "Moriar Felman",
+   "kind": "level",
+   "profession": "",
+   "milestone": 20
+  },
+  {
+   "at": "2026-11-09T18:00:00Z",
+   "character": "Evianne Purafire",
+   "kind": "level",
+   "profession": "",
+   "milestone": 20
+  },
+  {
+   "at": "2026-11-09T18:00:00Z",
+   "character": "Electro Cutey",
+   "kind": "level",
+   "profession": "",
+   "milestone": 20
+  },
+  {
+   "at": "2026-11-09T18:00:00Z",
+   "character": "Arnu Ashvane",
+   "kind": "profession",
+   "profession": "Skinning",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-09T18:00:00Z",
+   "character": "Arnu Ashvane",
+   "kind": "profession",
+   "profession": "Cooking",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-09T18:00:00Z",
+   "character": "Arnu Ashvane",
+   "kind": "profession",
+   "profession": "Fishing",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-09T18:00:00Z",
+   "character": "Coolin Boolin",
+   "kind": "profession",
+   "profession": "Fishing",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-09T18:00:00Z",
+   "character": "Hap Hzrd",
+   "kind": "profession",
+   "profession": "Skinning",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-09T18:00:00Z",
+   "character": "Incon Solable",
+   "kind": "profession",
+   "profession": "Enchanting",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-09T18:00:00Z",
+   "character": "Incon Solable",
+   "kind": "profession",
+   "profession": "Cooking",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-09T18:00:00Z",
+   "character": "Incon Solable",
+   "kind": "profession",
+   "profession": "Fishing",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-09T18:00:00Z",
+   "character": "Swanky Pantz",
+   "kind": "profession",
+   "profession": "Skinning",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-09T18:00:00Z",
+   "character": "Moriar Felman",
+   "kind": "profession",
+   "profession": "First Aid",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-09T18:00:00Z",
+   "character": "Electro Cutey",
+   "kind": "profession",
+   "profession": "Cooking",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-11T00:57:37.000Z",
+   "character": "Biff Baldhead",
+   "kind": "profession",
+   "profession": "Alchemy",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-11T00:57:37.000Z",
+   "character": "Biff Baldhead",
+   "kind": "profession",
+   "profession": "Herbalism",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-11T00:57:37.000Z",
+   "character": "Coolin Boolin",
+   "kind": "level",
+   "profession": "",
+   "milestone": 30
+  },
+  {
+   "at": "2026-11-12T01:34:14Z",
+   "character": "Incon Solable",
+   "kind": "level",
+   "profession": "",
+   "milestone": 30
+  },
+  {
+   "at": "2026-11-12T01:34:14Z",
+   "character": "Arnu Ashvane",
+   "kind": "profession",
+   "profession": "Mining",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-12T01:34:14Z",
+   "character": "Arnu Ashvane",
+   "kind": "profession",
+   "profession": "Cooking",
+   "milestone": 225
+  },
+  {
+   "at": "2026-11-12T01:34:14Z",
+   "character": "Reese Withershock",
+   "kind": "profession",
+   "profession": "Skinning",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-12T01:34:14Z",
+   "character": "Moriar Felman",
+   "kind": "profession",
+   "profession": "Mining",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-13T00:56:08.000Z",
+   "character": "Reese Withershock",
+   "kind": "level",
+   "profession": "",
+   "milestone": 20
+  },
+  {
+   "at": "2026-11-13T00:56:08.000Z",
+   "character": "Reese Withershock",
+   "kind": "profession",
+   "profession": "Leatherworking",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-13T00:56:08.000Z",
+   "character": "Shibito Duskblade",
+   "kind": "profession",
+   "profession": "First Aid",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-13T00:56:08.000Z",
+   "character": "Stever Winn",
+   "kind": "profession",
+   "profession": "Cooking",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-13T00:56:08.000Z",
+   "character": "Stever Winn",
+   "kind": "profession",
+   "profession": "Cooking",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-13T00:56:08.000Z",
+   "character": "Stever Winn",
+   "kind": "profession",
+   "profession": "Fishing",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-13T00:56:08.000Z",
+   "character": "Stever Winn",
+   "kind": "profession",
+   "profession": "Fishing",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-13T00:56:08.000Z",
+   "character": "Swanky Pantz",
+   "kind": "level",
+   "profession": "",
+   "milestone": 30
+  },
+  {
+   "at": "2026-11-13T00:56:08.000Z",
+   "character": "Swanky Pantz",
+   "kind": "profession",
+   "profession": "Leatherworking",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-13T00:56:08.000Z",
+   "character": "Toyt Arisen",
+   "kind": "level",
+   "profession": "",
+   "milestone": 20
+  },
+  {
+   "at": "2026-11-13T00:56:08.000Z",
+   "character": "Toyt Arisen",
+   "kind": "profession",
+   "profession": "Blacksmithing",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-13T00:56:08.000Z",
+   "character": "Toyt Arisen",
+   "kind": "profession",
+   "profession": "Cooking",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-13T00:56:08.000Z",
+   "character": "Toyt Arisen",
+   "kind": "profession",
+   "profession": "First Aid",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-13T00:56:08.000Z",
+   "character": "Toyt Arisen",
+   "kind": "profession",
+   "profession": "Mining",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-14T00:56:38.000Z",
+   "character": "Arnu Ashvane",
+   "kind": "level",
+   "profession": "",
+   "milestone": 30
+  },
+  {
+   "at": "2026-11-14T00:56:38.000Z",
+   "character": "Stever Winn",
+   "kind": "level",
+   "profession": "",
+   "milestone": 20
+  },
+  {
+   "at": "2026-11-14T00:56:38.000Z",
+   "character": "Hap Hzrd",
+   "kind": "level",
+   "profession": "",
+   "milestone": 30
+  },
+  {
+   "at": "2026-11-14T00:56:38.000Z",
+   "character": "Succubi Senpai",
+   "kind": "profession",
+   "profession": "Tailoring",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-14T00:56:38.000Z",
+   "character": "Succubi Senpai",
+   "kind": "profession",
+   "profession": "First Aid",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-14T00:56:38.000Z",
+   "character": "Stever Winn",
+   "kind": "profession",
+   "profession": "Mining",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-15T00:57:05.000Z",
+   "character": "Bigmama Moomoo",
+   "kind": "level",
+   "profession": "",
+   "milestone": 20
+  },
+  {
+   "at": "2026-11-15T00:57:05.000Z",
+   "character": "Ghoast Dog",
+   "kind": "level",
+   "profession": "",
+   "milestone": 30
+  },
+  {
+   "at": "2026-11-15T00:57:05.000Z",
+   "character": "Succubi Senpai",
+   "kind": "level",
+   "profession": "",
+   "milestone": 20
+  },
+  {
+   "at": "2026-11-15T00:57:05.000Z",
+   "character": "Arnu Ashvane",
+   "kind": "profession",
+   "profession": "Skinning",
+   "milestone": 225
+  },
+  {
+   "at": "2026-11-15T00:57:05.000Z",
+   "character": "Bigmama Moomoo",
+   "kind": "profession",
+   "profession": "Skinning",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-15T00:57:05.000Z",
+   "character": "Hap Hzrd",
+   "kind": "profession",
+   "profession": "Leatherworking",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-15T00:57:05.000Z",
+   "character": "Hap Hzrd",
+   "kind": "profession",
+   "profession": "Leatherworking",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-15T00:57:05.000Z",
+   "character": "Moriar Felman",
+   "kind": "profession",
+   "profession": "Blacksmithing",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-15T00:57:05.000Z",
+   "character": "Stever Winn",
+   "kind": "profession",
+   "profession": "Skinning",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-15T00:57:05.000Z",
+   "character": "Succubi Senpai",
+   "kind": "profession",
+   "profession": "Enchanting",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-15T00:57:05.000Z",
+   "character": "Swanky Pantz",
+   "kind": "profession",
+   "profession": "Skinning",
+   "milestone": 225
+  },
+  {
+   "at": "2026-11-16T00:56:48.000Z",
+   "character": "Biff Baldhead",
+   "kind": "profession",
+   "profession": "First Aid",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-16T00:56:48.000Z",
+   "character": "Bigmama Moomoo",
+   "kind": "profession",
+   "profession": "Leatherworking",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-16T00:56:48.000Z",
+   "character": "Bigmama Moomoo",
+   "kind": "profession",
+   "profession": "Cooking",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-16T00:56:48.000Z",
+   "character": "Succubi Senpai",
+   "kind": "profession",
+   "profession": "Cooking",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-16T00:56:48.000Z",
+   "character": "Succubi Senpai",
+   "kind": "profession",
+   "profession": "Fishing",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-17T00:57:03.000Z",
+   "character": "Shibito Duskblade",
+   "kind": "level",
+   "profession": "",
+   "milestone": 20
+  },
+  {
+   "at": "2026-11-17T00:57:03.000Z",
+   "character": "Stever Winn",
+   "kind": "level",
+   "profession": "",
+   "milestone": 30
+  },
+  {
+   "at": "2026-11-17T00:57:03.000Z",
+   "character": "Arnu Ashvane",
+   "kind": "profession",
+   "profession": "First Aid",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-17T00:57:03.000Z",
+   "character": "Arnu Ashvane",
+   "kind": "profession",
+   "profession": "First Aid",
+   "milestone": 225
+  },
+  {
+   "at": "2026-11-17T00:57:03.000Z",
+   "character": "Incon Solable",
+   "kind": "profession",
+   "profession": "Cooking",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-17T00:57:03.000Z",
+   "character": "Incon Solable",
+   "kind": "profession",
+   "profession": "Cooking",
+   "milestone": 225
+  },
+  {
+   "at": "2026-11-17T00:57:03.000Z",
+   "character": "Incon Solable",
+   "kind": "profession",
+   "profession": "Fishing",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-17T00:57:03.000Z",
+   "character": "Incon Solable",
+   "kind": "profession",
+   "profession": "Fishing",
+   "milestone": 225
+  },
+  {
+   "at": "2026-11-17T00:57:03.000Z",
+   "character": "Shibito Duskblade",
+   "kind": "profession",
+   "profession": "Mining",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-18T00:56:53.000Z",
+   "character": "Bigmama Moomoo",
+   "kind": "profession",
+   "profession": "Fishing",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-18T00:56:53.000Z",
+   "character": "Moriar Felman",
+   "kind": "level",
+   "profession": "",
+   "milestone": 30
+  },
+  {
+   "at": "2026-11-18T00:56:53.000Z",
+   "character": "Shibito Duskblade",
+   "kind": "profession",
+   "profession": "Blacksmithing",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-18T00:56:53.000Z",
+   "character": "Stever Winn",
+   "kind": "profession",
+   "profession": "Skinning",
+   "milestone": 225
+  },
+  {
+   "at": "2026-11-19T04:55:35.000Z",
+   "character": "Toyt Arisen",
+   "kind": "profession",
+   "profession": "Cooking",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-19T04:55:35.000Z",
+   "character": "Stever Winn",
+   "kind": "profession",
+   "profession": "Mining",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-19T04:55:35.000Z",
+   "character": "Swanky Pantz",
+   "kind": "profession",
+   "profession": "Fishing",
+   "milestone": 75
+  },
+  {
+   "at": "2026-11-19T14:53:27.000Z",
+   "character": "Incon Solable",
+   "kind": "level",
+   "profession": "",
+   "milestone": 40
+  },
+  {
+   "at": "2026-11-19T14:53:27.000Z",
+   "character": "Stever Winn",
+   "kind": "profession",
+   "profession": "Cooking",
+   "milestone": 225
+  },
+  {
+   "at": "2026-11-19T14:53:27.000Z",
+   "character": "Stever Winn",
+   "kind": "profession",
+   "profession": "Cooking",
+   "milestone": 300
+  },
+  {
+   "at": "2026-11-19T14:53:27.000Z",
+   "character": "Stever Winn",
+   "kind": "profession",
+   "profession": "Fishing",
+   "milestone": 225
+  },
+  {
+   "at": "2026-11-20T04:56:50.000Z",
+   "character": "Arnu Ashvane",
+   "kind": "profession",
+   "profession": "Cooking",
+   "milestone": 300
+  },
+  {
+   "at": "2026-11-21T04:56:39.000Z",
+   "character": "Ghoast Dog",
+   "kind": "profession",
+   "profession": "Enchanting",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-21T04:56:39.000Z",
+   "character": "Ghoast Dog",
+   "kind": "profession",
+   "profession": "Tailoring",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-21T04:56:39.000Z",
+   "character": "Hap Hzrd",
+   "kind": "profession",
+   "profession": "Skinning",
+   "milestone": 225
+  },
+  {
+   "at": "2026-11-21T04:56:39.000Z",
+   "character": "Moriar Felman",
+   "kind": "profession",
+   "profession": "Mining",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-22T15:15:49.000Z",
+   "character": "Biff Baldhead",
+   "kind": "level",
+   "profession": "",
+   "milestone": 20
+  },
+  {
+   "at": "2026-11-22T15:15:49.000Z",
+   "character": "Biff Baldhead",
+   "kind": "profession",
+   "profession": "Alchemy",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-22T15:15:49.000Z",
+   "character": "Biff Baldhead",
+   "kind": "profession",
+   "profession": "Alchemy",
+   "milestone": 225
+  },
+  {
+   "at": "2026-11-23T04:56:33.000Z",
+   "character": "Incon Solable",
+   "kind": "profession",
+   "profession": "Tailoring",
+   "milestone": 150
+  },
+  {
+   "at": "2026-11-23T04:56:33.000Z",
+   "character": "Incon Solable",
+   "kind": "profession",
+   "profession": "Enchanting",
+   "milestone": 225
+  }
+ ]
+}

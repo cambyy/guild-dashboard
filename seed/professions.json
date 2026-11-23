@@ -1,0 +1,805 @@
+{
+ "updated": "2026-11-23T04:56:33.000Z",
+ "rows": [
+  {
+   "character": "Arnu Ashvane",
+   "cls": "Paladin",
+   "level": 39,
+   "profession": "Skinning",
+   "kind": "Primary",
+   "skill": 250,
+   "max": 300,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Arnu Ashvane",
+   "cls": "Paladin",
+   "level": 39,
+   "profession": "Mining",
+   "kind": "Primary",
+   "skill": 219,
+   "max": 300,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Arnu Ashvane",
+   "cls": "Paladin",
+   "level": 39,
+   "profession": "Cooking",
+   "kind": "Secondary",
+   "skill": 300,
+   "max": 300,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Arnu Ashvane",
+   "cls": "Paladin",
+   "level": 39,
+   "profession": "Fishing",
+   "kind": "Secondary",
+   "skill": 189,
+   "max": 225,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Arnu Ashvane",
+   "cls": "Paladin",
+   "level": 39,
+   "profession": "First Aid",
+   "kind": "Secondary",
+   "skill": 246,
+   "max": 300,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Biff Baldhead",
+   "cls": "Rogue",
+   "level": 20,
+   "profession": "Alchemy",
+   "kind": "Primary",
+   "skill": 225,
+   "max": 225,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Biff Baldhead",
+   "cls": "Rogue",
+   "level": 20,
+   "profession": "Herbalism",
+   "kind": "Primary",
+   "skill": 94,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Biff Baldhead",
+   "cls": "Rogue",
+   "level": 20,
+   "profession": "First Aid",
+   "kind": "Secondary",
+   "skill": 94,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Bigmama Moomoo",
+   "cls": "Hunter",
+   "level": 26,
+   "profession": "Leatherworking",
+   "kind": "Primary",
+   "skill": 103,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Bigmama Moomoo",
+   "cls": "Hunter",
+   "level": 26,
+   "profession": "Skinning",
+   "kind": "Primary",
+   "skill": 172,
+   "max": 225,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Bigmama Moomoo",
+   "cls": "Hunter",
+   "level": 26,
+   "profession": "Cooking",
+   "kind": "Secondary",
+   "skill": 94,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Bigmama Moomoo",
+   "cls": "Hunter",
+   "level": 26,
+   "profession": "Fishing",
+   "kind": "Secondary",
+   "skill": 75,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Bigmama Moomoo",
+   "cls": "Hunter",
+   "level": 26,
+   "profession": "First Aid",
+   "kind": "Secondary",
+   "skill": 74,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Coolin Boolin",
+   "cls": "Mage",
+   "level": 31,
+   "profession": "Tailoring",
+   "kind": "Primary",
+   "skill": 125,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Coolin Boolin",
+   "cls": "Mage",
+   "level": 31,
+   "profession": "Enchanting",
+   "kind": "Primary",
+   "skill": 110,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Coolin Boolin",
+   "cls": "Mage",
+   "level": 31,
+   "profession": "Cooking",
+   "kind": "Secondary",
+   "skill": 150,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Coolin Boolin",
+   "cls": "Mage",
+   "level": 31,
+   "profession": "Fishing",
+   "kind": "Secondary",
+   "skill": 168,
+   "max": 225,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Electro Cutey",
+   "cls": "Shaman",
+   "level": 21,
+   "profession": "Skinning",
+   "kind": "Primary",
+   "skill": 128,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Electro Cutey",
+   "cls": "Shaman",
+   "level": 21,
+   "profession": "Mining",
+   "kind": "Primary",
+   "skill": 101,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Electro Cutey",
+   "cls": "Shaman",
+   "level": 21,
+   "profession": "Cooking",
+   "kind": "Secondary",
+   "skill": 117,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Electro Cutey",
+   "cls": "Shaman",
+   "level": 21,
+   "profession": "Fishing",
+   "kind": "Secondary",
+   "skill": 138,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Evianne Purafire",
+   "cls": "Mage",
+   "level": 21,
+   "profession": "Tailoring",
+   "kind": "Primary",
+   "skill": 57,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Evianne Purafire",
+   "cls": "Mage",
+   "level": 21,
+   "profession": "Enchanting",
+   "kind": "Primary",
+   "skill": 47,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Evianne Purafire",
+   "cls": "Mage",
+   "level": 21,
+   "profession": "Cooking",
+   "kind": "Secondary",
+   "skill": 4,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Gerry Meandering",
+   "cls": "Hunter",
+   "level": 11,
+   "profession": "Leatherworking",
+   "kind": "Primary",
+   "skill": 35,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Gerry Meandering",
+   "cls": "Hunter",
+   "level": 11,
+   "profession": "Skinning",
+   "kind": "Primary",
+   "skill": 75,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Gerry Meandering",
+   "cls": "Hunter",
+   "level": 11,
+   "profession": "Cooking",
+   "kind": "Secondary",
+   "skill": 18,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Gerry Meandering",
+   "cls": "Hunter",
+   "level": 11,
+   "profession": "Fishing",
+   "kind": "Secondary",
+   "skill": 23,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Ghoast Dog",
+   "cls": "Priest",
+   "level": 39,
+   "profession": "Tailoring",
+   "kind": "Primary",
+   "skill": 150,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Ghoast Dog",
+   "cls": "Priest",
+   "level": 39,
+   "profession": "Enchanting",
+   "kind": "Primary",
+   "skill": 174,
+   "max": 225,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Ghoast Dog",
+   "cls": "Priest",
+   "level": 39,
+   "profession": "Fishing",
+   "kind": "Secondary",
+   "skill": 14,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Hap Hzrd",
+   "cls": "Shaman",
+   "level": 38,
+   "profession": "Leatherworking",
+   "kind": "Primary",
+   "skill": 175,
+   "max": 225,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Hap Hzrd",
+   "cls": "Shaman",
+   "level": 38,
+   "profession": "Skinning",
+   "kind": "Primary",
+   "skill": 236,
+   "max": 300,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Hap Hzrd",
+   "cls": "Shaman",
+   "level": 38,
+   "profession": "Cooking",
+   "kind": "Secondary",
+   "skill": 147,
+   "max": 225,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Hap Hzrd",
+   "cls": "Shaman",
+   "level": 38,
+   "profession": "Fishing",
+   "kind": "Secondary",
+   "skill": 119,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Hap Hzrd",
+   "cls": "Shaman",
+   "level": 38,
+   "profession": "First Aid",
+   "kind": "Secondary",
+   "skill": 72,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Incon Sistent",
+   "cls": "Druid",
+   "level": 12,
+   "profession": "Skinning",
+   "kind": "Primary",
+   "skill": 61,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Incon Sistent",
+   "cls": "Druid",
+   "level": 12,
+   "profession": "Enchanting",
+   "kind": "Primary",
+   "skill": 3,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Incon Solable",
+   "cls": "Priest",
+   "level": 44,
+   "profession": "Tailoring",
+   "kind": "Primary",
+   "skill": 150,
+   "max": 225,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Incon Solable",
+   "cls": "Priest",
+   "level": 44,
+   "profession": "Enchanting",
+   "kind": "Primary",
+   "skill": 225,
+   "max": 225,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Incon Solable",
+   "cls": "Priest",
+   "level": 44,
+   "profession": "Cooking",
+   "kind": "Secondary",
+   "skill": 225,
+   "max": 225,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Incon Solable",
+   "cls": "Priest",
+   "level": 44,
+   "profession": "Fishing",
+   "kind": "Secondary",
+   "skill": 227,
+   "max": 300,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Incon Trovertible",
+   "cls": "Shaman",
+   "level": 16,
+   "profession": "Skinning",
+   "kind": "Primary",
+   "skill": 75,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Incon Trovertible",
+   "cls": "Shaman",
+   "level": 16,
+   "profession": "Herbalism",
+   "kind": "Primary",
+   "skill": 30,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Kraid Felman",
+   "cls": "Warlock",
+   "level": 11,
+   "profession": "Tailoring",
+   "kind": "Primary",
+   "skill": 30,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Kraid Felman",
+   "cls": "Warlock",
+   "level": 11,
+   "profession": "Herbalism",
+   "kind": "Primary",
+   "skill": 32,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Kraid Felman",
+   "cls": "Warlock",
+   "level": 11,
+   "profession": "First Aid",
+   "kind": "Secondary",
+   "skill": 20,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Moriar Felman",
+   "cls": "Paladin",
+   "level": 35,
+   "profession": "Mining",
+   "kind": "Primary",
+   "skill": 160,
+   "max": 225,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Moriar Felman",
+   "cls": "Paladin",
+   "level": 35,
+   "profession": "Blacksmithing",
+   "kind": "Primary",
+   "skill": 94,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Moriar Felman",
+   "cls": "Paladin",
+   "level": 35,
+   "profession": "Cooking",
+   "kind": "Secondary",
+   "skill": 14,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Moriar Felman",
+   "cls": "Paladin",
+   "level": 35,
+   "profession": "First Aid",
+   "kind": "Secondary",
+   "skill": 134,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Reese Withershock",
+   "cls": "Shaman",
+   "level": 24,
+   "profession": "Leatherworking",
+   "kind": "Primary",
+   "skill": 80,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Reese Withershock",
+   "cls": "Shaman",
+   "level": 24,
+   "profession": "Skinning",
+   "kind": "Primary",
+   "skill": 148,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Reese Withershock",
+   "cls": "Shaman",
+   "level": 24,
+   "profession": "Cooking",
+   "kind": "Secondary",
+   "skill": 58,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Reese Withershock",
+   "cls": "Shaman",
+   "level": 24,
+   "profession": "Fishing",
+   "kind": "Secondary",
+   "skill": 20,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Reese Withershock",
+   "cls": "Shaman",
+   "level": 24,
+   "profession": "First Aid",
+   "kind": "Secondary",
+   "skill": 21,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Shibito Duskblade",
+   "cls": "Paladin",
+   "level": 26,
+   "profession": "Mining",
+   "kind": "Primary",
+   "skill": 120,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Shibito Duskblade",
+   "cls": "Paladin",
+   "level": 26,
+   "profession": "Blacksmithing",
+   "kind": "Primary",
+   "skill": 97,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Shibito Duskblade",
+   "cls": "Paladin",
+   "level": 26,
+   "profession": "Cooking",
+   "kind": "Secondary",
+   "skill": 14,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Shibito Duskblade",
+   "cls": "Paladin",
+   "level": 26,
+   "profession": "First Aid",
+   "kind": "Secondary",
+   "skill": 115,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Slate Fistcrunch",
+   "cls": "Warrior",
+   "level": 13,
+   "profession": "Mining",
+   "kind": "Primary",
+   "skill": 70,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Slate Fistcrunch",
+   "cls": "Warrior",
+   "level": 13,
+   "profession": "Blacksmithing",
+   "kind": "Primary",
+   "skill": 50,
+   "max": 75,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Stever Winn",
+   "cls": "Hunter",
+   "level": 39,
+   "profession": "Skinning",
+   "kind": "Primary",
+   "skill": 257,
+   "max": 300,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Stever Winn",
+   "cls": "Hunter",
+   "level": 39,
+   "profession": "Mining",
+   "kind": "Primary",
+   "skill": 201,
+   "max": 225,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Stever Winn",
+   "cls": "Hunter",
+   "level": 39,
+   "profession": "Cooking",
+   "kind": "Secondary",
+   "skill": 300,
+   "max": 300,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Stever Winn",
+   "cls": "Hunter",
+   "level": 39,
+   "profession": "Fishing",
+   "kind": "Secondary",
+   "skill": 255,
+   "max": 300,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Succubi Senpai",
+   "cls": "Warlock",
+   "level": 26,
+   "profession": "Tailoring",
+   "kind": "Primary",
+   "skill": 110,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Succubi Senpai",
+   "cls": "Warlock",
+   "level": 26,
+   "profession": "Enchanting",
+   "kind": "Primary",
+   "skill": 135,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Succubi Senpai",
+   "cls": "Warlock",
+   "level": 26,
+   "profession": "Cooking",
+   "kind": "Secondary",
+   "skill": 115,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Succubi Senpai",
+   "cls": "Warlock",
+   "level": 26,
+   "profession": "Fishing",
+   "kind": "Secondary",
+   "skill": 113,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Succubi Senpai",
+   "cls": "Warlock",
+   "level": 26,
+   "profession": "First Aid",
+   "kind": "Secondary",
+   "skill": 92,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Swanky Pantz",
+   "cls": "Rogue",
+   "level": 39,
+   "profession": "Leatherworking",
+   "kind": "Primary",
+   "skill": 163,
+   "max": 225,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Swanky Pantz",
+   "cls": "Rogue",
+   "level": 39,
+   "profession": "Skinning",
+   "kind": "Primary",
+   "skill": 225,
+   "max": 225,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Swanky Pantz",
+   "cls": "Rogue",
+   "level": 39,
+   "profession": "Cooking",
+   "kind": "Secondary",
+   "skill": 71,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Swanky Pantz",
+   "cls": "Rogue",
+   "level": 39,
+   "profession": "Fishing",
+   "kind": "Secondary",
+   "skill": 107,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Swanky Pantz",
+   "cls": "Rogue",
+   "level": 39,
+   "profession": "First Aid",
+   "kind": "Secondary",
+   "skill": 65,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Toyt Arisen",
+   "cls": "Warrior",
+   "level": 28,
+   "profession": "Mining",
+   "kind": "Primary",
+   "skill": 139,
+   "max": 225,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Toyt Arisen",
+   "cls": "Warrior",
+   "level": 28,
+   "profession": "Blacksmithing",
+   "kind": "Primary",
+   "skill": 138,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Toyt Arisen",
+   "cls": "Warrior",
+   "level": 28,
+   "profession": "Cooking",
+   "kind": "Secondary",
+   "skill": 150,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  },
+  {
+   "character": "Toyt Arisen",
+   "cls": "Warrior",
+   "level": 28,
+   "profession": "First Aid",
+   "kind": "Secondary",
+   "skill": 144,
+   "max": 150,
+   "updated": "2026-11-23T04:56:33.000Z"
+  }
+ ]
+}
