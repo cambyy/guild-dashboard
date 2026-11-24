@@ -3,7 +3,7 @@
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fetchCharacter, mapLimit, slugFromName } from '../lib/armory.js';
-import { load, save } from '../lib/store.js';
+import { load, save, storageConfigured } from '../lib/store.js';
 
 const LEVEL_MILESTONES = [10, 20, 30, 40, 50, 60];
 const SKILL_MILESTONES = [75, 150, 225, 300];
@@ -28,7 +28,7 @@ export default async function handler(req, res) {
 }
 
 async function run(req, res) {
-  if (!process.env.BLOB_READ_WRITE_TOKEN) {
+  if (!storageConfigured()) {
     return res.status(500).json({ ok: false, message: "Storage isn't connected. In Vercel, open Storage, connect the Blob store to this project, then redeploy." });
   }
   const secret = process.env.CRON_SECRET;

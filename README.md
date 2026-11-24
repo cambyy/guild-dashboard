@@ -18,8 +18,8 @@ Professions, levels, classes and achievements for the Thrall Dressed guild in Wo
 1. **GitHub**: create a free account at [github.com](https://github.com), then click **New repository**, name it `guild-dashboard`, and create it. On the new repository page, click **uploading an existing file**, drag in **everything inside this folder** (not the folder itself), and click **Commit changes**.
 2. **Vercel**: sign up free at [vercel.com](https://vercel.com) with **Continue with GitHub**.
 3. **Import**: in Vercel click **Add New → Project**, pick `guild-dashboard`, leave the settings as they are and click **Deploy**. You'll get an address like `guild-dashboard-xxxx.vercel.app`. The page already works at this point, showing the bundled data.
-4. **Storage**: open the project, go to the **Storage** tab, click **Create → Blob**, give it any name, and connect it to the project (all environments).
-5. **Secret**: go to **Settings → Environment Variables** and add `CRON_SECRET` with a long random password (letters and numbers only). Save it somewhere; you'll use it once below.
+4. **Storage**: open the project, go to the **Storage** tab, click **Create → Blob**, give it any name, and connect it to the project (all environments). Vercel adds `BLOB_STORE_ID` to the project automatically; no token is needed.
+5. **Secret**: go to the project's environment variables (**Settings → Environment Variables**, or **Settings → Environments → Production** in newer layouts) and add `CRON_SECRET` with a long random password (letters and numbers only). Save it somewhere; you'll use it once below.
 6. **Redeploy**: go to **Deployments**, open the menu on the latest one, and choose **Redeploy** so the storage and secret take effect.
 7. **First refresh**: visit `https://YOUR-ADDRESS/api/refresh?key=YOUR-CRON-SECRET` in your browser. After about 20 seconds you should see `"ok": true` and a list of characters read. Then open your dashboard and press **Refresh** in your browser.
 
@@ -44,6 +44,7 @@ Members already in the saved data are always included. Characters whose Armory p
 Open `https://YOUR-ADDRESS/api/health` in a browser. It checks the setup and lists any problems in plain words:
 
 - **`storageConnected: false`**: connect the Blob store under **Storage**, then redeploy.
+- **`storageWorks` starts with "no"**: the store is connected but saving failed. In the store's **Projects** tab, edit the connection and turn on **Add a read-write token env var to this connection**, then redeploy.
 - **`cronSecretSet: false`**: add `CRON_SECRET` under **Settings → Environment Variables**, then redeploy.
 - **`armoryStatus` isn't 200**: Blizzard didn't return the character page to Vercel's servers (they may be blocking them).
 - **`armoryParsed` isn't ok**: the page loaded but its layout may have changed.

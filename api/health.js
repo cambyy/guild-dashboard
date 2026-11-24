@@ -1,25 +1,22 @@
 // Setup check: open /api/health in a browser to see what's working.
 // Shows no secrets; tests storage and reads one Armory page.
-import { head } from '@vercel/blob';
 import { characterUrl, fetchCharacter } from '../lib/armory.js';
+import { storageConfigured, selfTest } from '../lib/store.js';
 
 export default async function handler(req, res) {
   const checks = {};
 
   checks.cronSecretSet = !!process.env.CRON_SECRET;
-  checks.storageConnected = !!process.env.BLOB_READ_WRITE_TOKEN;
+  checks.storageConnected = storageConfigured();
+  checks.storageMethod = process.env.BLOB_STORE_ID ? 'store id + automatic OIDC' : (process.env.BLOB_READ_WRITE_TOKEN ? 'read-write token' : 'none');
 
   if (checks.storageConnected) {
     try {
-      const meta = await head('data/status.json');
-      checks.savedData = `found, last saved ${meta.uploadedAt}`;
+      const access = await selfTest();
+      checks.storageWorks = `yes (${access} store)`;
     } catch (e) {
-      checks.savedData = /not.?found/i.test(String(e && (e.name || e.message)))
-        ? 'not saved yet (run the first refresh)'
-        : `storage error: ${e && e.message}`;
+      checks.storageWorks = `no: ${e && e.message}`;
     }
-  } else {
-    checks.savedData = 'storage not connected';
   }
 
   const testSlug = (req.query && req.query.character) || 'arnu-ashvane';
@@ -41,8 +38,9 @@ export default async function handler(req, res) {
   }
 
   const problems = [];
-  if (!checks.storageConnected) problems.push("Connect the Blob store under Storage, then redeploy.");
-  if (!checks.cronSecretSet) problems.push('Add CRON_SECRET under Settings → Environment Variables, then redeploy.');
+  if (!checks.storageConnected) problems.push('Connect the Blob store to this project under Storage, then redeploy.');
+  else if (!String(checks.storageWorks).startsWith('yes')) problems.push('Storage is connected but saving failed (see storageWorks).');
+  if (!checks.cronSecretSet) problems.push('Add CRON_SECRET in the project environment variables, then redeploy.');
   if (checks.armoryStatus !== 200) problems.push('The Armory did not return the character page. Blizzard may be blocking Vercel.');
   else if (!String(checks.armoryParsed).startsWith('ok')) problems.push('The Armory page loaded but its layout may have changed.');
 
