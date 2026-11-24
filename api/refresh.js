@@ -19,6 +19,18 @@ async function configuredMembers() {
 }
 
 export default async function handler(req, res) {
+  try {
+    return await run(req, res);
+  } catch (err) {
+    console.error('refresh failed', err);
+    return res.status(500).json({ ok: false, message: `Refresh crashed: ${err && err.message ? err.message : String(err)}. Open /api/health for a full check.` });
+  }
+}
+
+async function run(req, res) {
+  if (!process.env.BLOB_READ_WRITE_TOKEN) {
+    return res.status(500).json({ ok: false, message: "Storage isn't connected. In Vercel, open Storage, connect the Blob store to this project, then redeploy." });
+  }
   const secret = process.env.CRON_SECRET;
   const auth = req.headers.authorization || '';
   const key = (req.query && req.query.key) || '';
@@ -43,7 +55,8 @@ export default async function handler(req, res) {
   for (const s of status.skipped || []) slugs.add(s);
   const list = [...slugs].sort();
 
-  const results = await mapLimit(list, 4, (slug) => fetchCharacter(slug));
+  const started = Date.now();
+  const results = await mapLimit(list, 6, (slug) => (Date.now() - started > 40000 ? null : fetchCharacter(slug)));
   const NOW = new Date().toISOString();
   const rows = [];
   const skipped = [];
@@ -57,7 +70,7 @@ export default async function handler(req, res) {
   // If Blizzard blocked us or changed the page, don't wipe the dashboard.
   const readCount = results.filter(Boolean).length;
   if (readCount === 0) {
-    return res.status(502).json({ ok: false, message: 'Could not read any character pages from the Armory. Nothing was changed.', skipped });
+    return res.status(502).json({ ok: false, message: 'Could not read any character pages from the Armory (Blizzard may be blocking Vercel, or the page layout changed). Nothing was changed. Open /api/health for details.', skipped });
   }
 
   // New milestones, only for characters seen in both the previous and the new data.

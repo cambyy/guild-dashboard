@@ -39,6 +39,17 @@ The refresh can't read the guild roster itself, so new members need to be added 
 
 Members already in the saved data are always included. Characters whose Armory page doesn't load yet (usually very new, low-level ones) are skipped until it does.
 
+## If something isn't working
+
+Open `https://YOUR-ADDRESS/api/health` in a browser. It checks the setup and lists any problems in plain words:
+
+- **`storageConnected: false`**: connect the Blob store under **Storage**, then redeploy.
+- **`cronSecretSet: false`**: add `CRON_SECRET` under **Settings → Environment Variables**, then redeploy.
+- **`armoryStatus` isn't 200**: Blizzard didn't return the character page to Vercel's servers (they may be blocking them).
+- **`armoryParsed` isn't ok**: the page loaded but its layout may have changed.
+
+For more detail, open the project in Vercel, go to **Logs**, press Refresh on the dashboard, and look for lines from `/api/refresh`.
+
 ## Notes
 
 - **Achievements**: level milestones are 10/20/30/40/50/60 and profession milestones are 75/150/225/300. They're counted only for characters seen in two refreshes in a row, so a newly added member doesn't flood the list. The "new" chip counts milestones from the latest refresh.

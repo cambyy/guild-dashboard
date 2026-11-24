@@ -381,6 +381,9 @@
     try {
       const res = await fetch('/api/refresh', { method: 'POST' });
       const out = await res.json().catch(() => ({}));
+      if (!res.ok && !out.message) out.message = res.status === 504
+        ? 'Refresh timed out (the Armory was too slow). Showing the last saved data.'
+        : `Refresh failed (error ${res.status}). Showing the last saved data. See /api/health.`;
       if (res.ok && out.ok) {
         const n = (out.newAchievements || []).length;
         msg.textContent = n ? `Updated: ${n} new achievement${n === 1 ? '' : 's'}!` : 'Updated: no new achievements.';
