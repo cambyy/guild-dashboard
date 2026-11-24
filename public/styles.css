@@ -125,3 +125,16 @@ body { font-family: var(--font); font-size: var(--body); line-height: 1.45; padd
 
 .gp-foot { color: var(--muted); font-size: var(--caption); text-align: center; padding: var(--gap-md) 0; }
 .gp-loading { opacity: .5; }
+
+/* Add member */
+.gp-secondary { font: inherit; font-weight: 600; color: var(--gold); background: transparent; border: 1px solid var(--gold); padding: 4px 10px; cursor: pointer; }
+.gp-secondary:hover { background: rgba(217, 188, 123, .1); }
+.gp-dialog { background: var(--panel); color: var(--fg); border: 1px solid var(--gold); padding: var(--pad); width: min(26rem, calc(100vw - 32px)); box-shadow: 0 12px 40px rgba(0,0,0,.6); }
+.gp-dialog::backdrop { background: rgba(10, 6, 4, .7); }
+.gp-dialog h2 { font-size: var(--heading); font-weight: 500; margin: 0; padding-bottom: var(--gap-xs); border-bottom: 1px solid var(--line); }
+.gp-field { display: grid; gap: 4px; margin-bottom: var(--gap-md); color: var(--muted); font-size: var(--caption); }
+.gp-field input { font: inherit; font-size: var(--body); padding: 7px 9px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); }
+.gp-field input:focus { outline: 1px solid var(--gold); outline-offset: -1px; }
+.gp-form-msg { margin: 0 0 var(--gap-md); padding: 8px 10px; font-size: var(--caption); border-left: 2px solid var(--gold); background: rgba(217, 188, 123, .06); }
+.gp-form-msg.is-error { border-left-color: #d9534f; background: rgba(217, 83, 79, .1); color: #f2b8b5; }
+.gp-dialog-actions { display: flex; justify-content: flex-end; gap: var(--gap-sm); }

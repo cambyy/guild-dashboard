@@ -73,7 +73,8 @@
 
   // ---------- Achievements ----------
   function renderAchievements() {
-    const n = achievements.filter((a) => a.at === latest).length;
+    const isNew = (a) => !!latest && a.at >= latest;
+    const n = achievements.filter(isNew).length;
     const chip = $('ach-new');
     chip.hidden = !n;
     chip.textContent = n ? `${n} new` : '';
@@ -82,7 +83,7 @@
     const list = $('ach-list');
     list.replaceChildren();
     const sorted = [...achievements].sort((x, y) =>
-      d3.descending(x.at, y.at) || d3.descending(x.kind === 'level', y.kind === 'level') ||
+      d3.descending(x.at, y.at) || d3.descending(x.kind === 'joined', y.kind === 'joined') || d3.descending(x.kind === 'level', y.kind === 'level') ||
       d3.descending(+x.milestone, +y.milestone) || d3.ascending(x.character, y.character));
     if (!sorted.length) {
       const li = document.createElement('li');
@@ -92,7 +93,7 @@
     }
     for (const a of sorted) {
       const li = document.createElement('li');
-      if (a.at === latest) li.classList.add('is-new');
+      if (isNew(a)) li.classList.add('is-new');
       const date = document.createElement('span');
       date.className = 'gp-ach-date';
       date.textContent = new Date(a.at).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
@@ -101,9 +102,11 @@
       who.className = 'gp-cls';
       who.textContent = a.character;
       who.style.color = classColor(cls[a.character]);
-      text.append(who, document.createTextNode(a.kind === 'level'
-        ? ` reached level ${a.milestone}!`
-        : ` reached ${a.milestone} in ${String(a.profession).toLowerCase()}!`));
+      text.append(who, document.createTextNode(a.kind === 'joined'
+        ? ' joined the guild!'
+        : a.kind === 'level'
+          ? ` reached level ${a.milestone}!`
+          : ` reached ${a.milestone} in ${String(a.profession).toLowerCase()}!`));
       li.append(date, text);
       list.appendChild(li);
     }
@@ -370,6 +373,7 @@
       renderTable();
     }));
     $('refresh-btn').addEventListener('click', refresh);
+    wireAddMember();
     let t;
     window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(renderFiltered, 150); });
   }
@@ -397,6 +401,53 @@
       btn.disabled = false; btn.classList.remove('gp-spin');
       setTimeout(() => { msg.hidden = true; }, 8000);
     }
+  }
+
+  // ---------- Add member ----------
+  function wireAddMember() {
+    const dlg = $('add-dialog'), form = $('add-form'), msg = $('add-msg'), submit = $('add-submit');
+    const show = (text, isError) => { msg.hidden = false; msg.textContent = text; msg.classList.toggle('is-error', !!isError); };
+    $('add-btn').addEventListener('click', () => {
+      form.reset(); msg.hidden = true; submit.disabled = false;
+      dlg.showModal();
+      $('add-name').focus();
+    });
+    $('add-cancel').addEventListener('click', () => dlg.close());
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = $('add-name').value.trim();
+      const password = $('add-password').value;
+      if (!name || !password) { show('Enter both the character name and the officer password.', true); return; }
+      submit.disabled = true;
+      show(`Checking the Armory for ${name}…`);
+      try {
+        // 1. Add the member (the server checks the password and the Armory first).
+        const res = await fetch('/api/add-member', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ name, password }),
+        });
+        const out = await res.json().catch(() => ({}));
+        if (!res.ok || !out.ok) {
+          show(out.message || `Something went wrong (error ${res.status}). Nothing was added.`, true);
+          submit.disabled = false;
+          $('add-password').select();
+          return;
+        }
+        // 2. Then refresh the page's data so they appear right away.
+        show(`${out.message} Updating the dashboard…`);
+        await loadData();
+        dlg.close();
+        const top = $('refresh-msg');
+        top.hidden = false;
+        top.textContent = `${out.character} joined the roster!`;
+        setTimeout(() => { top.hidden = true; }, 8000);
+        $('achievements').open = true;
+      } catch {
+        show("Couldn't reach the server. Nothing was added.", true);
+        submit.disabled = false;
+      }
+    });
   }
 
   document.addEventListener('DOMContentLoaded', () => { wire(); loadData(); });

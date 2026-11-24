@@ -7,6 +7,11 @@
   <meta name="description" content="Professions, levels, classes and achievements for the Thrall Dressed guild in WoW: Forever.">
   <link rel="icon" href="/favicon.png">
   <link rel="stylesheet" href="/styles.css">
+  <!-- Vercel Web Analytics (turn it on under Analytics in the Vercel project) -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js" defer></script>
   <script src="/app.js" defer></script>
 </head>
@@ -18,6 +23,7 @@
         <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9M13.5 2.5v3h-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span>Refresh</span>
       </button>
+      <button type="button" class="gp-secondary" id="add-btn">+ Add member</button>
       <p class="gp-updated">Last updated <span id="updated">—</span></p>
       <p class="gp-msg" id="refresh-msg" hidden></p>
     </div>
@@ -31,13 +37,31 @@
     <p class="gp-lede">Tracking <b id="lede-members">—</b> characters with <b id="lede-active">—</b> active professions. Thinnest crafting coverage: <b id="lede-thin">—</b>.</p>
   </header>
 
+  <dialog class="gp-dialog" id="add-dialog" aria-labelledby="add-title">
+    <form id="add-form" method="dialog">
+      <h2 id="add-title">Add a guild member</h2>
+      <p class="gp-note">Officers only. Enter the character's name as it appears on the Armory.</p>
+      <label class="gp-field">Character name
+        <input type="text" id="add-name" autocomplete="off" placeholder="e.g. Arnette Fizzlebeef" required>
+      </label>
+      <label class="gp-field">Officer password
+        <input type="password" id="add-password" autocomplete="current-password" required>
+      </label>
+      <p class="gp-form-msg" id="add-msg" role="status" hidden></p>
+      <div class="gp-dialog-actions">
+        <button type="button" class="gp-secondary" id="add-cancel">Cancel</button>
+        <button type="submit" class="gp-refresh" id="add-submit">Add member</button>
+      </div>
+    </form>
+  </dialog>
+
   <details class="gp-card gp-ach" id="achievements">
     <summary>
       <span>Guild Achievements</span>
       <span class="gp-chip" id="ach-new" hidden></span>
       <span class="gp-ach-caret" aria-hidden="true">▾</span>
     </summary>
-    <p class="gp-note">Levels 10, 20, 30, 40, 50 and 60, and profession skill 75, 150, 225 and 300, newest first.</p>
+    <p class="gp-note">New members, levels 10, 20, 30, 40, 50 and 60, and profession skill 75, 150, 225 and 300, newest first.</p>
     <ul class="gp-ach-list" id="ach-list"></ul>
   </details>
 

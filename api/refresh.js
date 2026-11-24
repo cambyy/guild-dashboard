@@ -51,6 +51,8 @@ async function run(req, res) {
 
   // Members = the configured list plus everyone already in the saved data.
   const slugs = new Set(await configuredMembers());
+  const added = (await load('members')) || {};
+  for (const m of added.members || []) slugs.add(m);
   for (const r of prevProfs.rows || []) slugs.add(slugFromName(r.character));
   for (const s of status.skipped || []) slugs.add(s);
   const list = [...slugs].sort();

@@ -19,9 +19,10 @@ Professions, levels, classes and achievements for the Thrall Dressed guild in Wo
 2. **Vercel**: sign up free at [vercel.com](https://vercel.com) with **Continue with GitHub**.
 3. **Import**: in Vercel click **Add New → Project**, pick `guild-dashboard`, leave the settings as they are and click **Deploy**. You'll get an address like `guild-dashboard-xxxx.vercel.app`. The page already works at this point, showing the bundled data.
 4. **Storage**: open the project, go to the **Storage** tab, click **Create → Blob**, give it any name, and connect it to the project (all environments). Vercel adds `BLOB_STORE_ID` to the project automatically; no token is needed.
-5. **Secret**: go to the project's environment variables (**Settings → Environment Variables**, or **Settings → Environments → Production** in newer layouts) and add `CRON_SECRET` with a long random password (letters and numbers only). Save it somewhere; you'll use it once below.
+5. **Secret**: go to the project's environment variables (**Settings → Environment Variables**, or **Settings → Environments → Production** in newer layouts) and add `CRON_SECRET` with a long random password (letters and numbers only). Save it somewhere; you'll use it once below. Also add `OFFICER_PASSWORD` with the password officers will use to add members.
 6. **Redeploy**: go to **Deployments**, open the menu on the latest one, and choose **Redeploy** so the storage and secret take effect.
-7. **First refresh**: visit `https://YOUR-ADDRESS/api/refresh?key=YOUR-CRON-SECRET` in your browser. After about 20 seconds you should see `"ok": true` and a list of characters read. Then open your dashboard and press **Refresh** in your browser.
+7. **Analytics** (optional): in the project, open **Analytics** and click **Enable**, then redeploy. Page views start showing within a day of visitors.
+8. **First refresh**: visit `https://YOUR-ADDRESS/api/refresh?key=YOUR-CRON-SECRET` in your browser. After about 20 seconds you should see `"ok": true` and a list of characters read. Then open your dashboard and press **Refresh** in your browser.
 
 That's it. From now on:
 
@@ -31,13 +32,13 @@ That's it. From now on:
 
 ## Adding a new guild member
 
-The refresh can't read the guild roster itself, so new members need to be added once:
+On the dashboard, click **+ Add member**, type the character's name (e.g. `Arnette Fizzlebeef`) and the officer password, and click **Add member**.
 
-1. Open `seed/members.json` on GitHub and click the pencil icon.
-2. Add their Armory name: lowercase, words joined with a hyphen, as in their Armory link (e.g. `https://…/armory/character/arnu-ashvane` → `"arnu-ashvane"`).
-3. Click **Commit changes**. Their data appears after the next refresh.
+- **Checks first:** the site checks the password and looks the character up on the Armory. It refuses unknown names, characters in another guild, and anyone already on the roster.
+- **Shows up straight away:** the member is saved, their professions are added, and a "joined the guild!" line appears in Guild Achievements. Then the page updates.
+- **Password:** it lives in Vercel as `OFFICER_PASSWORD` (not in the code), so you can change it there at any time and redeploy.
 
-Members already in the saved data are always included. Characters whose Armory page doesn't load yet (usually very new, low-level ones) are skipped until it does.
+Members can also still be added by editing `seed/members.json` on GitHub.
 
 ## If something isn't working
 
